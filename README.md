@@ -1,7 +1,7 @@
 # TestProgrammForVersta 
 
-Использованная БД - PostgreSQL. Для корректной работы в Visual Studio необходимо утановить пакеты 
-* Npgsql.EntityFrameworkCore.PostgreSQL
+Использованная БД - PostgreSQL. Для корректной работы в Visual Studio необходимо утановить пакеты: 
+* Microsoft.AspNetCore.SpaProxy
 * Microsoft.EntityFrameworkCore
 * Microsoft.EntityFrameworkCore.Tools
 * Npgsql.EntityFrameworkCore.PostgreSQL
