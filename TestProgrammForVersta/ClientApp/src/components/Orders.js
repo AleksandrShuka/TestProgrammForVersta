@@ -38,17 +38,13 @@ export class Orders extends Component {
                             <td>{forecast.recieverCity}</td>
                             <td>{forecast.recieverAddress}</td>
                             <td>{forecast.weight}</td>
-                            <td>{this.formatDate(forecast.date)}</td>
+                            <td>{(new Date(forecast.date)).toLocaleDateString()}</td>
                         </tr>
                     )}
                 </tbody>
             </Table>
         );
     }
-
-    static formatDate(date) {
-        return (new Date(date)).toLocaleDateString();
-    };
 
     render() {
         let contents = this.state.loading

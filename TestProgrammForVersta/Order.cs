@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace TestProgrammForVersta
+﻿namespace TestProgrammForVersta
 {
-    public partial class Order
+    public class Order
     {
         public int Id { get; set; }
         public string? SenderCity { get; set; }

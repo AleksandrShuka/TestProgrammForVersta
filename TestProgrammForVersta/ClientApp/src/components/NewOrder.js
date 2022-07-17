@@ -22,8 +22,10 @@ export class NewOrder extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        this.createOrder();
-        event.target.reset();
+        if (window.confirm("Создать заказ?")) {
+            this.createOrder();
+            event.target.reset();
+        }
     }
 
     handleInputChange(event) {
@@ -36,8 +38,7 @@ export class NewOrder extends Component {
         });
     }
 
-    async createOrder()
-    {
+    async createOrder() {
         const settings = {
             method: 'POST',
             headers: {
@@ -64,7 +65,7 @@ export class NewOrder extends Component {
                     </Form.Group>
                     <Form.Group className="mb-3" onChange={this.handleInputChange}>
                         <Form.Label>Город получателя</Form.Label>
-                        <Form.Control name="RecieverCity"type="text" required placeholder="Москва" />
+                        <Form.Control name="RecieverCity" type="text" required placeholder="Москва" />
                     </Form.Group>
                     <Form.Group className="mb-3" onChange={this.handleInputChange}>
                         <Form.Label>Адрес получателя</Form.Label>

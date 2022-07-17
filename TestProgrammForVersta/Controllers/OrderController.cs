@@ -11,14 +11,18 @@ namespace TestProgrammForVersta.Controllers
         [HttpGet]
         public IEnumerable<Order> Get()
         {
-            return db.Orders.ToList();
+            return db.Orders.ToArray();
         }
 
         [HttpPost("create")]
-        public object Create([FromBody] Order order)
+        public object? Create([FromBody] Order order)
         {
-            db.Orders.Add(order);
-            db.SaveChanges();
+            if (null != order)
+            {
+                db.Orders.Add(order);
+                db.SaveChanges();
+            }
+
             return order;
         }
     }
