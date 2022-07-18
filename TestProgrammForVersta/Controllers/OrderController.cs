@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TestProgrammForVersta.Data;
+using TestProgrammForVersta.Repo;
 
 namespace TestProgrammForVersta.Controllers
 {

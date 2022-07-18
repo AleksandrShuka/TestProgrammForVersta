@@ -37,6 +37,8 @@
     <None Remove="..\web\aspnetcore-react.js" />
     <None Remove="..\web\package-lock.json" />
     <None Remove="..\web\package.json" />
+    <None Remove="..\web\Web.esproj" />
+    <None Remove="..\web\Web.esproj.user" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿namespace TestProgrammForVersta
+﻿namespace TestProgrammForVersta.Data
 {
     public class Order
     {

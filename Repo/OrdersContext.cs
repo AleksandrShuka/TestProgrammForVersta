@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TestProgrammForVersta.Data;
 
-
-namespace TestProgrammForVersta
+namespace TestProgrammForVersta.Repo
 {
     public partial class OrdersContext : DbContext
     {
