@@ -38,7 +38,7 @@ export class Orders extends Component {
                             <td>{forecast.recieverCity}</td>
                             <td>{forecast.recieverAddress}</td>
                             <td>{forecast.weight}</td>
-                            <td>{(new Date(forecast.date)).toLocaleDateString()}</td>
+                            <td>{forecast.date}</td>
                         </tr>
                     )}
                 </tbody>

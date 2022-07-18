@@ -1,8 +1,8 @@
-﻿namespace TestProgrammForVersta.Data
+﻿namespace TestProgrammForVersta.ServerData
 {
-    public class Order
+    public class OrderWeb
     {
-        public Order(int id, string? senderCity, string? senderAddress, string? recieverCity, string? recieverAddress, double weight, DateTime date)
+        public OrderWeb(int id, string? senderCity, string? senderAddress, string? recieverCity, string? recieverAddress, double weight, string date)
         {
             Id = id;
             SenderCity = senderCity;
@@ -19,6 +19,6 @@
         public string? RecieverCity { get; set; }
         public string? RecieverAddress { get; set; }
         public double Weight { get; set; }
-        public DateTime Date { get; set; }
+        public string Date { get; set; }
     }
 }
