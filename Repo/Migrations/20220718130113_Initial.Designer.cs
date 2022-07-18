@@ -5,14 +5,14 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-
+using TestProgrammForVersta;
 
 #nullable disable
 
-namespace TestProgrammForVersta.Migrations
+namespace Repo.Migrations
 {
     [DbContext(typeof(OrdersContext))]
-    [Migration("20220716075541_Initial")]
+    [Migration("20220718130113_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,7 +33,7 @@ namespace TestProgrammForVersta.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("Date")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("RecieverAddress")
                         .HasColumnType("text");
