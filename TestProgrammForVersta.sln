@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProgrammForVersta", "TestProgrammForVersta\TestProgrammForVersta.csproj", "{693F0FB7-77AC-46D0-90C8-71354216396D}"
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Web", "Web\Web.esproj", "{88FB211F-C094-4BDF-99D8-C665CAAA93DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{693F0FB7-77AC-46D0-90C8-71354216396D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{693F0FB7-77AC-46D0-90C8-71354216396D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{693F0FB7-77AC-46D0-90C8-71354216396D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88FB211F-C094-4BDF-99D8-C665CAAA93DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88FB211F-C094-4BDF-99D8-C665CAAA93DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88FB211F-C094-4BDF-99D8-C665CAAA93DF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{88FB211F-C094-4BDF-99D8-C665CAAA93DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88FB211F-C094-4BDF-99D8-C665CAAA93DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88FB211F-C094-4BDF-99D8-C665CAAA93DF}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
