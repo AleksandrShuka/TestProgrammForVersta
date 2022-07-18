@@ -31,7 +31,7 @@ export class Orders extends Component {
                 </thead>
                 <tbody>
                     {forecasts.map(forecast =>
-                        <tr key={forecast.date}>
+                        <tr key={forecast.id}>
                             <td>{forecast.id}</td>
                             <td>{forecast.senderCity}</td>
                             <td>{forecast.senderAddress}</td>

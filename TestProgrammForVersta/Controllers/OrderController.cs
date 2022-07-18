@@ -15,15 +15,16 @@ namespace TestProgrammForVersta.Controllers
         }
 
         [HttpPost("create")]
-        public object? Create([FromBody] Order order)
+        public async Task<IActionResult> Create([FromBody] Order order)
         {
-            if (null != order)
+            if (null == order)
             {
-                db.Orders.Add(order);
-                db.SaveChanges();
+                return BadRequest();
             }
 
-            return order;
+            db.Orders.Add(order);
+            db.SaveChanges();
+            return Created(new Uri($"{Request.Path}/{order.Id}", UriKind.Relative), order.Id);
         }
     }
 }

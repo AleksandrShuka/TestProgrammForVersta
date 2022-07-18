@@ -49,6 +49,13 @@ export class NewOrder extends Component {
         };
 
         const response = await fetch("order/create", settings);
+        if (response.status == 201) {
+            const data = await response.json();
+            window.alert("Ваш номер заказа: " + data);
+        }
+        else {
+            window.alert("Не удалось создать заказ, повторите попытку.");
+        }
     }
 
     render() {
