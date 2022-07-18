@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TestProgrammForVersta.Data;
-using TestProgrammForVersta.Repo;
+using TestProgrammForVersta.Services;
 
 namespace TestProgrammForVersta.Controllers
 {
@@ -8,25 +8,24 @@ namespace TestProgrammForVersta.Controllers
     [Route("[controller]")]
     public class OrderController : ControllerBase
     {
-        private readonly OrdersContext db = new();
+        private readonly OrderProcessor _orderProcessor = new();
 
         [HttpGet]
         public IEnumerable<Order> Get()
         {
-            return db.Orders.ToArray();
+            return _orderProcessor.GetOrders();
         }
 
         [HttpPost("create")]
-        public async Task<IActionResult> Create([FromBody] Order order)
+        public IActionResult Create([FromBody] Order order)
         {
             if (null == order)
             {
                 return BadRequest();
             }
 
-            db.Orders.Add(order);
-            db.SaveChanges();
-            return Created(new Uri($"{Request.Path}/{order.Id}", UriKind.Relative), order.Id);
+            var id = _orderProcessor.AddOrder(order);
+            return Created(new Uri($"{Request.Path}/{order.Id}", UriKind.Relative), id);
         }
     }
 }

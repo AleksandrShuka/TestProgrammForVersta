@@ -26,13 +26,31 @@ namespace TestProgrammForVersta.Repo
             {
                 throw new ArgumentNullException("entity");
             }
-            _entities.Remove(entity);
-            _context.SaveChanges();
+
+            try
+            {
+                _entities.Remove(entity);
+                _context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                // ...
+            }
         }
 
         public Order? Get(long id)
         {
-            return _entities.SingleOrDefault(s => s.Id == id);
+            Order? result = null;
+            try
+            {
+                result = _entities.SingleOrDefault(s => s.Id == id);
+            }
+            catch (Exception e)
+            {
+                // ...
+            }
+
+            return result;
         }
 
         public IEnumerable<Order> GetAll()
@@ -46,8 +64,16 @@ namespace TestProgrammForVersta.Repo
             {
                 throw new ArgumentNullException("entity");
             }
-            _entities.Add(entity);
-            _context.SaveChanges();
+
+            try
+            {
+                _entities.Add(entity);
+                _context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                // ...
+            }
         }
 
         public void Remove(Order entity)
@@ -56,12 +82,26 @@ namespace TestProgrammForVersta.Repo
             {
                 throw new ArgumentNullException("entity");
             }
-            _entities.Remove(entity);
+            try
+            {
+                _entities.Remove(entity);
+            }
+            catch (Exception e)
+            {
+
+            }
         }
 
-        public void SaveChanges()
+        public async void SaveChanges()
         {
-            _context.SaveChanges();
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+                // ...
+            }
         }
     }
 }
